@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Rapid Transaction Burst",
+        "description": "Multiple transactions occurring within a very short time frame (e.g., minutes or seconds), often across different merchants.",
+        "risk_indicators": ["High velocity of transactions", "Different merchant categories", "Amounts often below typical fraud limits"],
+        "recommended_action": "Temporarily freeze card, contact customer for verification."
+    },
+    {
+        "title": "Unusual Geographic Spending",
+        "description": "Transactions occurring in locations significantly different from the user's historical spending profile, especially cross-border.",
+        "risk_indicators": ["IP address mismatch", "Cross-border transactions", "Physical transactions far from home address"],
+        "recommended_action": "Verify transaction via SMS or app notification. Escalate if unconfirmed."
+    },
+    {
+        "title": "Sudden Large Transactions",
+        "description": "A transaction amount that is significantly higher than the user's average spending pattern.",
+        "risk_indicators": ["High transaction amount", "First-time merchant", "Luxury goods or electronics categories"],
+        "recommended_action": "Hold transaction for manual review, require multi-factor authentication."
+    },
+    {
+        "title": "Card-Not-Present Fraud",
+        "description": "Online or phone purchases where the physical card is not swiped or dipped, often using stolen card details.",
+        "risk_indicators": ["E-commerce transactions", "Mismatched billing and shipping addresses", "Multiple failed CVV attempts"],
+        "recommended_action": "Flag for enhanced review. If CVV failures preceded the success, decline the transaction."
+    },
+    {
+        "title": "Repeated Declined Transactions",
+        "description": "Multiple sequential transactions declined due to incorrect PIN, CVV, or insufficient funds.",
+        "risk_indicators": ["High failure rate", "Testing small amounts before a large transaction", "Sequential card numbers"],
+        "recommended_action": "Block further attempts and alert the fraud monitoring team."
+    }
+]

@@ -1,0 +1,51 @@
+from sqlalchemy import Column, Integer, String, Float, DateTime
+from datetime import datetime
+from database.db import Base
+
+class Transaction(Base):
+    __tablename__ = "transactions"
+
+    id = Column(Integer, primary_key=True, index=True)
+    transaction_id = Column(String, unique=True, index=True)
+    
+    # Keeping raw features as JSON could be simpler, but explicit columns are better for standard tabular ML datasets
+    Time = Column(Float)
+    V1 = Column(Float)
+    V2 = Column(Float)
+    V3 = Column(Float)
+    V4 = Column(Float)
+    V5 = Column(Float)
+    V6 = Column(Float)
+    V7 = Column(Float)
+    V8 = Column(Float)
+    V9 = Column(Float)
+    V10 = Column(Float)
+    V11 = Column(Float)
+    V12 = Column(Float)
+    V13 = Column(Float)
+    V14 = Column(Float)
+    V15 = Column(Float)
+    V16 = Column(Float)
+    V17 = Column(Float)
+    V18 = Column(Float)
+    V19 = Column(Float)
+    V20 = Column(Float)
+    V21 = Column(Float)
+    V22 = Column(Float)
+    V23 = Column(Float)
+    V24 = Column(Float)
+    V25 = Column(Float)
+    V26 = Column(Float)
+    V27 = Column(Float)
+    V28 = Column(Float)
+    Amount = Column(Float)
+
+    # ML Prediction
+    fraud_probability = Column(Float, nullable=True)
+    fraud_prediction = Column(Integer, nullable=True) # 0 or 1
+    risk_level = Column(String, nullable=True) # LOW, MEDIUM, HIGH
+    
+    # RAG Investigation Explanations
+    investigation_explanation = Column(String, nullable=True)
+    
+    timestamp = Column(DateTime, default=datetime.utcnow)
