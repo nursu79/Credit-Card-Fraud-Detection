@@ -85,27 +85,4 @@ docker-compose up --build
 
 ---
 
-## ⚙️ Environment Variables
-Copy `.env.example` to `.env` and configure accordingly:
-- `GOOGLE_API_KEY`: Use Google Gemini (Generous free tier) - **Recommended**.
-# AI Keys
-OPENAI_API_KEY=your_openai_key_here
-GOOGLE_API_KEY=your_google_gemini_key_here- `API_URL`: URL used by Streamlit to reach the backend.
-
-> **Note**: If both keys are present, Gemini is preferred. If none are present, it falls back to local rules.
-
----
-
-## 📊 Model Performance
-- **Type**: Logistic Regression (Balanced Weights)
-- **ROC-AUC**: **0.97+**
-- **Recall**: High (Crucial for catching fraud cases)
-- **Precision**: Tuned to minimize false flags on legitimate customers.
-
----
-
-## 🤝 Roadmap & Deployment
-- [ ] Implement OAuth2 Authentication for the Dashboard.
-- [ ] Add real-time Kafka stream ingestion.
-- [ ] Deploy to AWS/GCP via Kubernetes (K8s).
 
